@@ -1,0 +1,57 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.205.2/containers/go
+{
+	"name": "Go",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			"VARIANT": "1.17",
+			// Options
+			"NODE_VERSION": "16"
+		}
+	},
+	"runArgs": [
+		"--cap-add=SYS_PTRACE",
+		"--security-opt",
+		"seccomp=unconfined"
+	],
+	"settings": {
+		"go.toolsManagement.checkForUpdates": "local",
+		"go.useLanguageServer": true,
+		"go.gopath": "/go",
+		"go.goroot": "/usr/local/go",
+		"terminal.integrated.defaultProfile.linux": "bash",
+		// "terminal.integrated.shell.linux": "zsh"
+		// "terminal.integrated.shell.linux": "sh"
+		"leetcode.showDescription": "In File Comment",
+		"leetcode.workspaceFolder": "/workspaces/leetcode-playground-template-go",
+		"leetcode.filePath": {
+			"default": {
+				// relative folder path
+				"folder": "src",
+				"filename": "${id}.${kebab-case-name}.${ext}"
+			}
+		},
+		"leetcode.defaultLanguage": "go",
+	},
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"golang.Go",
+		"eamodio.gitlens",
+		"mhutchie.git-graph",
+		"codezombiech.gitignore",
+		"k--kato.docomment",
+		"yzhang.markdown-all-in-one",
+		"editorconfig.editorconfig",
+		"leetcode.vscode-leetcode"
+	],
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "go version",
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode",
+	"features": {
+		"git": "os-provided"
+	}
+}
