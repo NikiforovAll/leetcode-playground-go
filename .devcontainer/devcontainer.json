@@ -24,7 +24,7 @@
 		// "terminal.integrated.shell.linux": "zsh"
 		// "terminal.integrated.shell.linux": "sh"
 		"leetcode.showDescription": "In File Comment",
-		"leetcode.workspaceFolder": "/workspaces/leetcode-playground-template-go",
+		"leetcode.workspaceFolder": "/workspaces/leetcode-playground-go",
 		"leetcode.filePath": {
 			"default": {
 				// relative folder path
